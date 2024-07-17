@@ -7,10 +7,10 @@ image:
 
   
 ingress:
-  enabled: false
+  enabled: true
   className: "nginx"
   annotations: 
-         nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
       ingress.kubernetes.io/ssl-redirect: "false"
       cert-manager.io/cluster-issuer: letsencrypt-prod
       acme.cert-manager.io/http01-edit-in-place: "true"
@@ -19,7 +19,7 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls: []
+  tls: 
     - secretName: dev-artemis-tls
       hosts:
         - dev-artemis.olubukolaajayi.com

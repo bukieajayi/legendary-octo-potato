@@ -2,7 +2,7 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: us-central1-docker.pkg.dev/terraform-project-olubukola/artemis/artemis
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "7.0.0"
